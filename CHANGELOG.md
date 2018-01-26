@@ -1,8 +1,10 @@
 # Strophe.js Change Log
 
-## Version 1.2.15 - (Unreleased)
+## Version 1.2.14-1 - (2018-01-26)
 * #259 XML element should be sent to xmlOutput
 * #266 Support Browserify/CommonJS. `require('strophe.js/src/wrapper')`
+* #275 Records last response headers.
+* #276 Exports the element that triggers AUTH_FAIL to connect_callback.
 
 ## Version 1.2.14 - 2017-06-15
 * #231 SASL OAuth Bearer authentication should not require a JID node, when a user identifer
