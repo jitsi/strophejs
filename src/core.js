@@ -17,7 +17,6 @@ import SASLSHA1 from './sasl-sha1.js';
 import SASLXOAuth2 from './sasl-xoauth2.js';
 import SHA1 from './sha1';
 import utils from './utils';
-import { atob, btoa } from 'abab'
 
 /** Function: $build
  *  Create a Strophe.Builder.

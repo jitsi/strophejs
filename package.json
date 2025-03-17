@@ -77,8 +77,5 @@
     "terser": "^5.10.0",
     "yarpm": "^1.1.1"
   },
-  "dependencies": {
-    "abab": "^2.0.3",
-    "karma-rollup-preprocessor": "^7.0.8"
-  }
+  "dependencies": {}
 }
