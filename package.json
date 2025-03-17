@@ -80,9 +80,5 @@
   "dependencies": {
     "abab": "^2.0.3",
     "karma-rollup-preprocessor": "^7.0.8"
-  },
-  "optionalDependencies": {
-    "@xmldom/xmldom": "0.8.2",
-    "ws": "^8.5.0"
   }
 }

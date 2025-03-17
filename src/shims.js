@@ -25,11 +25,7 @@
 function getWebSocketImplementation () {
     let WebSocketImplementation = global.WebSocket;
     if (typeof WebSocketImplementation === 'undefined') {
-        try {
-            WebSocketImplementation = require('ws');
-        } catch (err) {
-            throw new Error('You must install the "ws" package to use Strophe in nodejs.');
-        }
+        throw new Error('WebSocket global not found!');
     }
     return WebSocketImplementation
 }
@@ -50,11 +46,7 @@ export const WebSocket = getWebSocketImplementation()
 function getDOMParserImplementation () {
     let DOMParserImplementation = global.DOMParser
     if (typeof DOMParserImplementation === 'undefined') {
-        try {
-            DOMParserImplementation = require('@xmldom/xmldom').DOMParser;
-        } catch (err) {
-            throw new Error('You must install the "@xmldom/xmldom" package to use Strophe in nodejs.');
-        }
+        throw new Error('DOMParser global not found!');
     }
     return DOMParserImplementation
 }
@@ -102,7 +94,7 @@ export function getDummyXMLDOMDocument () {
     // nodejs
     if (typeof document === 'undefined') {
         try {
-            const DOMImplementation = require('@xmldom/xmldom').DOMImplementation;
+            const DOMImplementation = getDOMParserImplementation();
             return new DOMImplementation().createDocument('jabber:client', 'strophe', null);
         } catch (err) {
             throw new Error('You must install the "@xmldom/xmldom" package to use Strophe in nodejs.');
