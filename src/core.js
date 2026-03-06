@@ -1776,7 +1776,7 @@ Strophe.Connection = class Connection {
         this.authcid = authcid || Strophe.getNodeFromJid(this.jid);
 
         if (this.authcid === 'resume') {
-            this.authcid = undefined;
+            this.authcid = null;
         }
 
         /** Variable: pass
