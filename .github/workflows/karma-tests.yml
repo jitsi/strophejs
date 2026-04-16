@@ -21,13 +21,13 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5  # v2
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@7c12f8017d5436eb855f1ed4399f037a36fbd9e8  # v2
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Run Karma tests
-      uses: GabrielBB/xvfb-action@v1
+      uses: GabrielBB/xvfb-action@86d97bde4a65fe9b290c0b3fb92c2c4ed0e5302d  # v1
       with:
           run: make check ARGS=--single-run
